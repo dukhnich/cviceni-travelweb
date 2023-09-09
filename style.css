@@ -52,6 +52,8 @@ img {
   background-color: #5c7f3b;
   border: 2px solid #4b7d1c;
   box-shadow: 0 0 10px 0px #172d0394;
+  position: sticky;
+  
 }
 
 .chat {
@@ -66,6 +68,8 @@ img {
 
 nav {
   /* všimni si, že při scrollování obsahem stránky navigace zůstává na vrchu viewportu  */
+  position: sticky;
+  top: 0;
 }
 
 main {
@@ -74,21 +78,32 @@ main {
 
 .travel {
   /* tento div při scrollování neodjede s obsahem, ale přilepí 10px pod navigací (50px od vrchu obsahu) */
+  position: sticky;
+  top: 50px;
 }
 
 .picture {
   /* je potřeba zajistit, abychom mohli přesunout popisek obrázku do pravého horního rohu obrázku */
+  position: relative;
+  z-index: -1;
 }
 
 .picture-description {
   /* popisek obrázku se nachází přímo na obrázku, 10px shora a 10px zprava */
+  position: absolute;
+  right: 10px;
+  top: 10px;
 }
 
 .mountains,
 .sea {
   /* obrázky hor a moře jsou zleva odsunuty o 450px */
+  left: 450px;
 }
 
 .chat {
   /* malého chatbota na stránce vidíme pořád. Visí vpravo dole, 10px od okrajů */
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
 }
